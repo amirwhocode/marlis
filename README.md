@@ -169,7 +169,7 @@ This part of the docker-compose.yml file defines a service for the Docker contai
     - **db_data:/var/lib/mysql**  Persists MariaDB data by mapping the named volume db_data to the container's MySQL data directory (/var/lib/mysql). This keeps your database data even if the container is destroyed.
 
 - **ports:**
-    - **3000:80**  Maps port 80 inside the container (default HTTP port) to port 3000 on the host machine. This means the web server can be accessed at http://localhost:8080 on the host.
+    - **3000:80**  Maps port 80 inside the container (default HTTP port) to port 3000 on the host machine. This means the web server can be accessed at http://localhost:3000 on the host.
 
 - **tty: true**  Keeps the terminal (tty) open for interactive sessions when the container is running.
 - **volumes:**
