@@ -1,0 +1,16 @@
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: testbed_1
+    volumes:
+      - ./workspace:/workspace
+      - db_data:/var/lib/mysql
+      - ./smtpclient:/etc/ssmtp
+    ports:
+      - 3000:80
+    tty: true
+
+volumes:
+  db_data:
