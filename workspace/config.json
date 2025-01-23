@@ -6,8 +6,8 @@
         "host" : "localhost",
         "port" : "3306",
         "database" : "ilias",
-        "user" : "marlis",
-        "password" : "12345Aa"
+        "user" : "dba",
+        "password" : "Blue$ky25"
     },
     "filesystem" : {
         "data_dir" : "/var/www/files"
@@ -26,9 +26,9 @@
     },
     "systemfolder" : {
         "contact" : {
-            "firstname" : "Amir",
-            "lastname" : "Ahkami",
-            "email" : "amir.ahkami@ruhr-uni-bochum.de"
+            "firstname" : "Some",
+            "lastname" : "One",
+            "email" : "someone@example.com"
         }
     },
     "utilities" : {

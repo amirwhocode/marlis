@@ -37,7 +37,7 @@ Important: PHP settings will be copied from the php.ini file automatically. Howe
 ## Getting started
 1. Clone this repository to your local machine
 ```
-git clone https://your-repository-url.git
+git clone https://github.com/amirwhocode/marlis.git
 ```
 
 2. Build the image
@@ -113,12 +113,12 @@ select @@table_open_cache; // also works
 SHOW VARIABLES LIKE 'innodb_buffer_pool_size'; // default was 128MB and after changing should be 8GB
 ```
 
-11. Create databse
+11. Create databse (chnage the user and password in the code below to match the values in config.json file.)
 ```
 CREATE DATABASE ilias CHARACTER SET utf8 COLLATE utf8_general_ci;
-CREATE USER 'marlis'@'localhost' IDENTIFIED BY '12345Aa';
-GRANT LOCK TABLES on *.* TO 'marlis'@'localhost';
-GRANT ALL PRIVILEGES ON ilias.* TO 'marlis'@'localhost';
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+GRANT LOCK TABLES on *.* TO 'user'@'localhost';
+GRANT ALL PRIVILEGES ON ilias.* TO 'user'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
