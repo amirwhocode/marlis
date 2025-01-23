@@ -166,7 +166,6 @@ This part of the docker-compose.yml file defines a service for the Docker contai
 
 - **volumes:**
     - **./src:/var/www/html**  Maps the ./src directory (from the host machine) to /var/www/html inside the container. This is typically where your web application's source code will reside.
-    - **db_data:/var/lib/mysql**  Persists MariaDB data by mapping the named volume db_data to the container's MySQL data directory (/var/lib/mysql). This keeps your database data even if the container is destroyed.
 
 - **ports:**
     - **3000:80**  Maps port 80 inside the container (default HTTP port) to port 3000 on the host machine. This means the web server can be accessed at http://localhost:3000 on the host.

@@ -6,7 +6,7 @@ services:
     container_name: testbed_1
     volumes:
       - ./workspace:/workspace
-      - db_data:/var/lib/mysql
+      - ./src:/var/www/html 
       - ./smtpclient:/etc/ssmtp
     ports:
       - 3000:80
