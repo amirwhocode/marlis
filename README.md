@@ -45,7 +45,7 @@ git clone https://github.com/amirwhocode/marlis.git
 docker-compose build --no-cache
 ```
 
-3. Start the container
+3. Start the container and then access the container's command line
 ```
 docker-compose up
 ```
@@ -113,7 +113,7 @@ select @@table_open_cache; // also works
 SHOW VARIABLES LIKE 'innodb_buffer_pool_size'; // default was 128MB and after changing should be 8GB
 ```
 
-11. Create databse (chnage the user and password in the code below to match the values in config.json file.)
+11. Create databse (chnage the user and password in the code below to match the values in config.json file.) and exit.
 ```
 CREATE DATABASE ilias CHARACTER SET utf8 COLLATE utf8_general_ci;
 CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
@@ -124,6 +124,7 @@ FLUSH PRIVILEGES;
 
 12. Customize your settings in the config.json file located in the workspace, then proceed with the ILIAS installation.
 ```
+cd /var/www
 mkdir logs
 mkdir files
 cd /var/www/html
