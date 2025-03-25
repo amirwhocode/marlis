@@ -3,13 +3,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: testbed_1
+    container_name: marlis
     volumes:
       - ./workspace:/workspace
       - ./src:/var/www/html 
       - ./smtpclient:/etc/ssmtp
     ports:
       - 3000:80
+      - 3307:3306
     tty: true
 
 volumes:

@@ -121,6 +121,14 @@ GRANT LOCK TABLES on *.* TO 'user'@'localhost';
 GRANT ALL PRIVILEGES ON ilias.* TO 'user'@'localhost';
 FLUSH PRIVILEGES;
 ```
+* If you're connecting to the database on your host machine using database management tools, execute the following SQL command instead.
+```
+GRANT ALL PRIVILEGES ON ilias.* TO 'user'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
+```
+* You must also edit to /etc/mysql/my.cnf and add following:
+```
+bind-address = 0.0.0.0
+```
 
 12. Customize your settings in the config.json file located in the workspace, then proceed with the ILIAS installation.
 ```
@@ -148,7 +156,7 @@ http://localhost:3000
 user: root
 pass: homer
 ```
-16. After logging in, you will be prompted to set a new password.
+16. After logging in, you will be prompted to set a new password (e.g. 123456).
 
 ## Dockerfile
 This Dockerfile creates a container with a development environment featuring:
